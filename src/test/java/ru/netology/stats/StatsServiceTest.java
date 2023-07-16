@@ -29,8 +29,8 @@ public class StatsServiceTest {
     public void shouldSumSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 180;
-        int actual = service.SumSales(sales);
+        int expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18);
+        int actual = service.sumSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -39,8 +39,8 @@ public class StatsServiceTest {
     public void shouldAverageSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expected = 15;
-        int actual = service.AverageSales(sales);
+        int expected = (8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18) / 12;
+        int actual = service.averageSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -50,7 +50,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
-        int actual = service.LowAverageSales(sales);
+        int actual = service.lowAverageSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -60,7 +60,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expected = 5;
-        int actual = service.OverAverageSales(sales);
+        int actual = service.overAverageSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
